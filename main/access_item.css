@@ -1,0 +1,144 @@
+.nebula-archive-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 60px 0;
+    padding-left: 20px;
+}
+
+.nebula-archive {
+    width: 100%;
+    max-width: 550px;
+    background: linear-gradient(135deg, #0b0e1a 0%, #1a1c2c 100%);
+    border-radius: 24px;
+    padding: 35px;
+    position: relative;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.starfield {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 150px 150px, #fff, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    opacity: 0.3;
+    animation: nebula-stars 60s linear infinite;
+}
+
+@keyframes nebula-stars {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
+
+.nebula-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.universe-pulse {
+    width: 12px;
+    height: 12px;
+    background: #00d4ff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00d4ff;
+    animation: universe-pulse-anim 2s infinite;
+}
+
+@keyframes universe-pulse-anim {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.nebula-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+.nebula-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.nebula-stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-label {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.highlight-blue { color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+.highlight-gold { color: #ffd700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+
+.unit {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+}
+
+.nebula-access-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.access-item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.access-bullet {
+    color: #00d4ff;
+    margin-right: 12px;
+}
+
+.access-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.access-status.active {
+    font-size: 10px;
+    font-weight: 900;
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px #00d4ff;
+}

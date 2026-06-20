@@ -1,0 +1,67 @@
+.impact-dashboard-wrapper {
+    margin: 40px 0;
+    padding-left: 20px;
+}
+.impact-dashboard {
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(135deg, #0a0e14 0%, #151b23 100%);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+.happiness-theme {
+    border-color: rgba(255, 215, 0, 0.2);
+    background: linear-gradient(135deg, #0e100a 0%, #1c1d12 100%);
+}
+.id-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+.id-icon { font-size: 14px; }
+.id-title {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.id-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+.id-value {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    font-family: 'Fira Code', monospace;
+}
+.id-value.growth { color: #00ffaa; text-shadow: 0 0 15px rgba(0, 255, 170, 0.3); }
+.id-value.happiness { color: #ffd700; text-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+
+.id-tags { display: flex; gap: 8px; }
+.id-tag {
+    font-size: 9px;
+    font-weight: 700;
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+.id-reason {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ir-label { font-size: 9px; font-weight: 800; color: rgba(255, 255, 255, 0.3); }
+.ir-text { font-size: 12px; color: #fff; font-weight: 500; }

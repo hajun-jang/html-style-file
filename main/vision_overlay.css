@@ -1,0 +1,111 @@
+/* vision_overlay.css - Generated from WORLD-EDITOR.md */
+
+/* --- External Styles --- */
+.vision-overlay-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px 0;
+    padding-left: 20px;
+}
+
+.v-main-title {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.v-stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.v-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.v-scanline {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: rgba(0, 212, 255, 0.15);
+    animation: v-scan 4s linear infinite;
+    pointer-events: none;
+}
+
+.v-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+}
+
+.v-bar {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 212, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+.normal {
+    color: #00ffaa;
+    text-shadow: 0 0 8px rgba(0, 255, 170, 0.4);
+}
+
+.v-value {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+}
+
+.v-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.v-info {
+    font-size: 8px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+.v-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: #00d4ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00d4ff;
+    animation: v-dot-pulse 2s infinite;
+}
+
+.v-footer {
+    margin-top: 25px;
+}
+
+.v-tag {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(0, 212, 255, 0.8);
+    text-transform: uppercase;
+}
+
+.vision-overlay {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px) saturate(180%);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 4px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+

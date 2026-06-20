@@ -1,0 +1,118 @@
+/* sync_ui.css - Generated from WORLD-EDITOR.md */
+
+/* --- External Styles --- */
+.sync-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sync-ui-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px 0;
+    padding-left: 20px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.sync-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.sync-ui-box {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgba(0, 20, 30, 0.95), rgba(0, 5, 10, 0.98));
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 4px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 242, 255, 0.1);
+    overflow: hidden;
+}
+
+.sync-icon {
+    font-size: 14px;
+    animation: sync-pulse 2s infinite;
+}
+
+.glitch-text {
+    position: relative;
+    color: #00f2ff;
+    font-weight: bold;
+}
+
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    animation: sync-glitch 3s infinite;
+}
+
+.data-stream {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    animation: sync-data-flow 3s linear infinite;
+}
+
+.data-stream-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 0;
+    padding-left: 20px;
+}
+
+.data-stream-box {
+    border-left: 2px solid rgba(0, 242, 255, 0.2);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sync-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(0, 242, 255, 0.7);
+}
+
+.sync-line {
+    font-size: 14px;
+    display: flex;
+    gap: 15px;
+}
+
+.highlight-line {
+    margin-top: 5px;
+    padding: 8px;
+    background: rgba(0, 242, 255, 0.05);
+    border-left: 3px solid #00f2ff;
+}
+
+.sync-label {
+    color: rgba(0, 242, 255, 0.4);
+    min-width: 100px;
+}
+
+.sync-value {
+    color: #ffffff;
+}
+
+.glow-cyan {
+    color: #00f2ff;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+}
+

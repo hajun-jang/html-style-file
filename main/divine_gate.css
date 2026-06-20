@@ -1,0 +1,157 @@
+/* divine_gate.css - Generated from WORLD-EDITOR.md */
+
+/* --- External Styles --- */
+.highlight-line {
+    margin-top: 5px;
+    padding: 8px;
+    background: rgba(0, 242, 255, 0.05);
+    border-left: 3px solid #00f2ff;
+}
+
+.highlight-blue { color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+
+.highlight-gold { color: #ffd700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+
+.highlight {
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    background: linear-gradient(45deg, #ffd700, #fff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 2s linear infinite;
+}
+
+.p-highlight {
+    color: #00d4ff;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.highlight-item {
+    border-left: 4px solid #007aff;
+    background: rgba(0, 122, 255, 0.05);
+}
+
+.d-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #ffd700, transparent); }
+
+.divine-gate-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 100px 0;
+    padding-left: 20px;
+    perspective: 1000px;
+}
+
+.divine-gate {
+    width: 100%;
+    max-width: 700px;
+    height: 450px;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0f 100%);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 50px 100px rgba(0,0,0,0.9),
+        0 0 50px rgba(100, 150, 255, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.unlock-msg {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: rgba(255,255,255,0.8);
+    display: flex;
+    gap: 15px;
+}
+
+.seal-inner {
+    animation: rotate-reverse 10s linear infinite;
+    border-style: dashed;
+}
+
+.d-diamond { width: 10px; height: 10px; background: #ffd700; transform: rotate(45deg); box-shadow: 0 0 10px #ffd700; }
+
+.authority-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+    position: relative;
+}
+
+.authority-title::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: rgba(255, 215, 0, 0.5);
+    filter: blur(8px);
+    animation: title-vibrate 0.1s infinite;
+}
+
+.status-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    margin-bottom: 30px;
+    opacity: 0.6;
+}
+
+.seal-outer {
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+}
+
+.seal-outer {
+    animation: rotate-normal 15s linear infinite;
+    scale: 1.2;
+    border-style: double;
+    border-width: 4px;
+}
+
+.cosmic-dust {
+    position: absolute;
+    bottom: -50px;
+    width: 200%;
+    height: 100px;
+    background: radial-gradient(ellipse at center, rgba(100, 150, 255, 0.1) 0%, transparent 70%);
+    filter: blur(30px);
+    animation: dust-move 10s linear infinite;
+}
+
+.word { animation: word-float 3s ease-in-out infinite; }
+
+.divine-seal {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.gate-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(255, 215, 0, 0.05) 50%, transparent);
+    pointer-events: none;
+}
+
+.gate-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+

@@ -1,0 +1,100 @@
+.aura-profiler-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 60px 0;
+    padding-left: 20px;
+}
+
+.aura-profiler {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(15, 20, 25, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profiler-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.scan-pulse {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.2) 0%, transparent 70%);
+    animation: pulse-ring 3s infinite;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.profiler-title {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgba(0, 255, 204, 0.6);
+}
+
+.user-id {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.stat-name { color: rgba(255, 255, 255, 0.5); }
+.stat-val { color: #fff; }
+
+.stat-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.stat-bar {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.brain-wave {
+    margin-top: 30px;
+    opacity: 0.5;
+}
+
+.stat-val.excel { color: #ffd700; }
+.stat-val.v-high { color: #00ffcc; }

@@ -1,0 +1,106 @@
+.guardian-ui-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 55px 0;
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.guardian-ui-box {
+    width: 100%;
+    max-width: 520px;
+    background: linear-gradient(145deg, rgba(5, 25, 15, 0.95), rgba(0, 10, 5, 0.98));
+    border: 1px solid rgba(0, 255, 127, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(0, 255, 127, 0.05);
+    overflow: hidden;
+}
+
+.guardian-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.shield-icon {
+    font-size: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 127, 0.5));
+}
+
+.guardian-status {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #00ff7f;
+    text-transform: uppercase;
+}
+
+.guardian-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.target-info, .priority-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-label, .priority-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.priority-tag {
+    background: rgba(0, 255, 127, 0.15);
+    color: #00ff7f;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 255, 127, 0.3);
+    text-shadow: 0 0 10px rgba(0, 255, 127, 0.3);
+}
+
+.auth-status {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    font-style: italic;
+}
+
+.auth-check {
+    color: #00ff7f;
+    font-weight: bold;
+}
+
+.pulse-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0, 255, 127, 0.05) 0%, transparent 70%);
+    animation: guardian-pulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes guardian-pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}

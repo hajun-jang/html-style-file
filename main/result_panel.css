@@ -1,0 +1,42 @@
+/* result_panel.css - Generated from WORLD-EDITOR.md */
+
+/* --- Inline Extracted Styles --- */
+.result-panel-wrapper {
+    margin: 20px 0; padding-left: 20px; font-family:
+}
+
+.result-card {
+    width: 100%; max-width: 320px; background: rgba(10, 10, 10, 0.8); border: 1px dashed rgba(255, 70, 70, 0.4); border-radius: 8px; padding: 15px; color: #fff;
+}
+
+.result-panel-auto-1 {
+    font-size: 10px; font-weight: 800; color: #ff8888; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase;
+}
+
+.result-panel-auto-2 {
+    display: flex; flex-direction: column; gap: 6px; font-size: 12px;
+}
+
+.result-panel-auto-3 {
+    display: flex; justify-content: space-between;
+}
+
+.result-panel-auto-4 {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.result-panel-auto-5 {
+    color: #ff5555; font-weight: bold;
+}
+
+.result-panel-auto-6 {
+    display: flex; justify-content: space-between;
+}
+
+.result-panel-auto-7 {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.result-panel-auto-8 {
+    color: #00d4ff; font-weight: bold;
+}

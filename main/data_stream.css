@@ -1,0 +1,40 @@
+/* data_stream.css - Generated from WORLD-EDITOR.md */
+
+/* --- External Styles --- */
+.data-stream-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 0;
+    padding-left: 20px;
+}
+
+.ds-dot {
+    width: 6px;
+    height: 6px;
+    background: #00f2ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00f2ff;
+    animation: ds-pulse 1.5s infinite;
+}
+
+.ds-dot { animation-delay: 0.5s; }
+
+.ds-dot { animation-delay: 1s; }
+
+.ds-item {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.data-stream-box {
+    border-left: 2px solid rgba(0, 242, 255, 0.2);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+

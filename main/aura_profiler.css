@@ -1,0 +1,199 @@
+/* aura_profiler.css - Generated from WORLD-EDITOR.md */
+
+/* --- External Styles --- */
+.highlight-line {
+    margin-top: 5px;
+    padding: 8px;
+    background: rgba(0, 242, 255, 0.05);
+    border-left: 3px solid #00f2ff;
+}
+
+.highlight-blue { color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+
+.highlight-gold { color: #ffd700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+
+.v-high { color: #00ffcc; }
+
+.p-high { background: rgba(255, 0, 80, 0.1); color: #ff0050; }
+
+.highlight {
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    background: linear-gradient(45deg, #ffd700, #fff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 2s linear infinite;
+}
+
+.p-highlight {
+    color: #00d4ff;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.highlight-item {
+    border-left: 4px solid #007aff;
+    background: rgba(0, 122, 255, 0.05);
+}
+
+.user-id {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.profiler-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.stat-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.stat-bar {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.scan-pulse {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.2) 0%, transparent 70%);
+    animation: pulse-ring 3s infinite;
+}
+
+.profiler-title {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgba(0, 255, 204, 0.6);
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.stat-val { color: #fff; }
+
+.excel { color: #ffd700; }
+
+.brain-wave {
+    margin-top: 30px;
+    opacity: 0.5;
+}
+
+.stat-name { color: rgba(255, 255, 255, 0.5); }
+
+.aura-profiler-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 60px 0;
+    padding-left: 20px;
+}
+
+.stable-tag {
+    font-size: 10px;
+    background: #00ffaa;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.glow-edge {
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.4), transparent 40%, transparent 60%, rgba(255, 215, 0, 0.4)) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.glow-cyan {
+    color: #00f2ff;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+}
+
+.glow-text {
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+.p-low { background: rgba(0, 0, 0, 0.05); color: #666; }
+
+.su-glow {
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+    animation: su-rotate 20s linear infinite;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aura-profiler {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(15, 20, 25, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Inline Extracted Styles --- */
+.stat-bar {
+    width: 15%; background: #00ffcc;
+}
+
+.stat-bar {
+    width: 85%; background: #00d4ff;
+}
+
+.stat-bar {
+    width: 95%; background: #00ffcc;
+}
+
+.stat-bar {
+    width: 25%; background: #ffffff;
+}
+
+.stat-bar {
+    width: 98%; background: #ffd700; box-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
