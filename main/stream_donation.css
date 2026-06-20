@@ -1,0 +1,123 @@
+/* stream_donation.css - 인터넷 방송 후원 알림 UI */
+
+.stream-donation-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.stream-donation {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(15, 15, 20, 0.95) !important;
+    border: 2px solid #ff007f !important; /* 네온 핑크 테두리 */
+    border-radius: 12px !important;
+    padding: 20px 24px !important;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff !important;
+    font-family: 'Segoe UI', 'Noto Sans KR', system-ui, sans-serif !important;
+    position: relative;
+    overflow: hidden;
+    animation: sd-pulse 2s infinite alternate;
+    box-sizing: border-box;
+}
+
+@keyframes sd-pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 0, 127, 0.25), inset 0 0 15px rgba(0, 0, 0, 0.5);
+        border-color: #ff007f !important;
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 0, 127, 0.55), inset 0 0 20px rgba(255, 0, 127, 0.1);
+        border-color: #ff5e97 !important;
+    }
+}
+
+/* 기부 효과 장식선 */
+.stream-donation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff007f, #7f00ff, #ff007f);
+    background-size: 200% 100%;
+    animation: gradient-slide 3s linear infinite;
+}
+
+@keyframes gradient-slide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.sd-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding-bottom: 12px !important;
+    flex-wrap: wrap;
+}
+
+.sd-nickname {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    color: #00f0ff !important; /* 네온 시안 */
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+}
+
+.sd-action {
+    font-size: 13px !important;
+    color: #e0e0e0 !important;
+    font-weight: 500;
+}
+
+.sd-amount {
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    color: #ffea00 !important; /* 밝은 노랑 */
+    text-shadow: 0 0 8px rgba(255, 234, 0, 0.6);
+    margin-left: 4px;
+}
+
+.sd-body {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    text-align: center;
+    color: #ffffff !important;
+    word-break: break-all;
+    padding: 5px 0 !important;
+    font-weight: 600 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* TTS 연출용 바 */
+.sd-tts-wave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin-top: 15px !important;
+}
+
+.sd-tts-wave span {
+    display: inline-block;
+    width: 3px;
+    height: 12px;
+    background-color: #ff007f;
+    border-radius: 2px !important;
+    animation: wave-bounce 1.2s ease-in-out infinite;
+}
+
+.sd-tts-wave span:nth-child(2) { animation-delay: 0.15s; height: 18px; background-color: #ff5e97; }
+.sd-tts-wave span:nth-child(3) { animation-delay: 0.3s; height: 14px; background-color: #00f0ff; }
+.sd-tts-wave span:nth-child(4) { animation-delay: 0.45s; height: 20px; background-color: #ffea00; }
+.sd-tts-wave span:nth-child(5) { animation-delay: 0.6s; height: 10px; background-color: #7f00ff; }
+
+@keyframes wave-bounce {
+    0%, 100% { transform: scaleY(0.4); }
+    50% { transform: scaleY(1.2); }
+}
