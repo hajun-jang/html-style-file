@@ -1,0 +1,239 @@
+/* ==========================================================================
+   [2] 터미널 및 콘솔 화면 스타일시트 (consoles.css)
+   ========================================================================== */
+
+/* 1. 터미널 코드 박스 (Terminal Box) */
+.terminal-box-wrapper {
+    margin: 25px 0;
+    padding-left: 20px;
+}
+
+.terminal-box {
+    background-color: #0b0f19 !important;
+    border: 1px solid #1e293b !important;
+    border-radius: 10px !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    max-width: 650px;
+    font-family: 'Consolas', 'Fira Code', 'Courier New', monospace !important;
+}
+
+.terminal-bar {
+    background-color: #111827 !important;
+    padding: 12px 18px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1f2937 !important;
+}
+
+.terminal-traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-light-red {
+    width: 11px;
+    height: 11px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-light-yellow {
+    width: 11px;
+    height: 11px;
+    background-color: #eab308;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-light-green {
+    width: 11px;
+    height: 11px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-title {
+    font-size: 11px !important;
+    color: #9ca3af !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+}
+
+.terminal-status {
+    font-size: 11px !important;
+    color: #f43f5e !important;
+    font-weight: bold !important;
+}
+
+.terminal-body {
+    padding: 20px !important;
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    color: #cbd5e1 !important;
+    background: #080c14 !important;
+    height: 380px;
+    overflow-y: scroll;
+    white-space: pre;
+}
+
+/* 터미널 내 코드 구문 하이라이트 */
+.c-comment { color: #475569 !important; }
+.c-directive { color: #f43f5e !important; font-weight: bold !important; }
+.c-include { color: #38bdf8 !important; }
+.c-constant { color: #fb923c !important; }
+.c-keyword { color: #f43f5e !important; font-weight: bold !important; }
+.c-type { color: #10b981 !important; font-weight: bold !important; }
+.c-function { color: #6366f1 !important; font-weight: bold !important; }
+.c-string { color: #38bdf8 !important; }
+.c-null { color: #a78bfa !important; }
+
+
+/* 2. 홀로그램 셸 커맨드 (Ghost Command) */
+.ghost-command-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 0;
+    padding-left: 20px;
+}
+
+.ghost-command {
+    font-family: 'Fira Code', 'JetBrains Mono', monospace !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #00f2ff !important;
+    text-shadow: 
+        0 0 10px rgba(0, 242, 255, 0.7),
+        0 0 20px rgba(0, 242, 255, 0.3);
+    position: relative;
+    padding: 10px 0 !important;
+    letter-spacing: 2px !important;
+    animation: g-floating 3s ease-in-out infinite;
+}
+
+@keyframes g-floating {
+    0%, 100% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(-5px); opacity: 1; }
+}
+
+.g-prefix {
+    margin-right: 15px !important;
+    color: rgba(0, 242, 255, 0.4) !important;
+    animation: g-pulse 1.5s infinite;
+}
+
+.g-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: #00f2ff;
+    margin-left: 10px;
+    vertical-align: middle;
+    box-shadow: 0 0 10px #00f2ff;
+    animation: g-blink 1s step-end infinite;
+}
+
+@keyframes g-blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes g-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+
+/* 3. 시스템 진단 패널 (Benchmark Panel) */
+.benchmark-wrapper {
+    background-color: #0d0f12 !important;
+    border: 1px solid rgba(224, 169, 109, 0.3) !important;
+    border-radius: 6px !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    max-width: 500px;
+    margin: 20px 0;
+    padding: 0 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.bm-header {
+    background-color: #161a22 !important;
+    padding: 8px 12px !important;
+    border-bottom: 1px solid rgba(224, 169, 109, 0.2) !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bm-icon {
+    font-size: 14px !important;
+    margin-right: 6px !important;
+}
+
+.bm-title {
+    color: #e0a96d !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+}
+
+.bm-badge {
+    background-color: #e0a96d !important;
+    color: #0d0f12 !important;
+    font-size: 9px !important;
+    padding: 1px 4px !important;
+    border-radius: 2px !important;
+    font-weight: bold !important;
+}
+
+.bm-body {
+    padding: 12px 16px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bm-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px !important;
+    color: #a9b7c6 !important;
+}
+
+.bm-label {
+    color: #808080 !important;
+}
+
+.bm-val {
+    color: #e0e0e0 !important;
+}
+
+.bm-divider {
+    border: 0;
+    border-top: 1px dashed rgba(224, 169, 109, 0.2) !important;
+    margin: 8px 0 !important;
+}
+
+.bm-row.highlight {
+    background-color: rgba(224, 169, 109, 0.05) !important;
+    padding: 4px !important;
+    border-radius: 3px !important;
+}
+
+.bm-row.highlight .bm-label {
+    color: #e0a96d !important;
+    font-weight: bold !important;
+}
+
+.bm-val.neon {
+    color: #2bac76 !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 5px rgba(43, 172, 118, 0.3);
+}
+
+.bm-val.success {
+    color: #57a6ff !important;
+}
