@@ -1,0 +1,91 @@
+/* smart_alert.css - 스마트폰 푸시 알림 UI */
+
+.smart-alert-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.smart-alert {
+    width: 100%;
+    max-width: 360px;
+    background: rgba(28, 28, 30, 0.7) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 13px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    color: #ffffff !important;
+    animation: sa-slide-down 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sa-slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.sa-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.sa-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4.5px !important;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.sa-app-name {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+}
+
+.sa-time {
+    margin-left: auto;
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.sa-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sa-title {
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+}
+
+.sa-msg {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    word-break: break-all;
+}
+
+/* 다양한 앱 테마 지원 */
+.sa-icon.kakaotalk { background: #fee500 !important; color: #191919 !important; }
+.sa-icon.toss { background: #0064ff !important; color: #ffffff !important; }
+.sa-icon.slack { background: #4a154b !important; color: #ffffff !important; }
+.sa-icon.discord { background: #5865f2 !important; color: #ffffff !important; }
+.sa-icon.imessage { background: #34c759 !important; color: #ffffff !important; }
