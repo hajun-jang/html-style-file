@@ -1,0 +1,38 @@
+/* 3. 속보 박스 (Breaking News) */
+.breaking-news-wrapper {
+    margin: 30px 0;
+    padding-left: 20px;
+}
+
+.breaking-news-box {
+    display: flex;
+    align-items: center;
+    background: #000 !important;
+    border: 1px solid #ff0000 !important;
+    border-radius: 4px !important;
+    padding: 10px 15px !important;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.bn-tag {
+    background: #ff0000 !important;
+    color: #fff !important;
+    font-size: 10px !important;
+    font-weight: 900 !important;
+    padding: 2px 8px !important;
+    border-radius: 2px !important;
+    margin-right: 15px !important;
+    animation: bn-pulse 1s infinite;
+}
+
+@keyframes bn-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.bn-content {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+}

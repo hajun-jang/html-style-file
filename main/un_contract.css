@@ -1,0 +1,107 @@
+/* 9. UN 청성 계약서 판넬 (UN Contract) */
+.un-contract-wrapper {
+    margin: 35px 0;
+    padding-left: 20px;
+}
+
+.un-contract {
+    background-color: #0b0f19 !important;
+    border: 2px double #e0a96d !important;
+    border-radius: 6px !important;
+    box-shadow: 0 15px 35px rgba(224, 169, 109, 0.15);
+    max-width: 580px;
+    font-family: 'Georgia', 'Times New Roman', serif !important;
+    color: #f4ede4 !important;
+    overflow: hidden;
+}
+
+.unc-header {
+    background: linear-gradient(135deg, #1b263b, #0d1b2a) !important;
+    padding: 20px !important;
+    text-align: center;
+    border-bottom: 1px solid #e0a96d !important;
+}
+
+.unc-emblem {
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: inline-block;
+    filter: drop-shadow(0 0 5px #e0a96d);
+}
+
+.unc-title {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    letter-spacing: 3px !important;
+    color: #e0a96d !important;
+}
+
+.unc-subtitle {
+    font-size: 9px !important;
+    color: #8d99ae !important;
+    letter-spacing: 1px !important;
+    margin-top: 5px !important;
+}
+
+.unc-body {
+    padding: 25px 30px !important;
+    font-size: 11px !important;
+    line-height: 1.8 !important;
+}
+
+.unc-section-title {
+    font-size: 11px !important;
+    font-weight: bold !important;
+    color: #e0a96d !important;
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    border-bottom: 1px dashed rgba(224, 169, 109, 0.3) !important;
+    padding-bottom: 3px !important;
+}
+
+.unc-list {
+    margin-left: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.unc-item {
+    margin-bottom: 6px !important;
+    text-align: justify;
+}
+
+.unc-highlight {
+    color: #e0a96d !important;
+    font-weight: bold !important;
+}
+
+.unc-footer {
+    background-color: #080c14 !important;
+    padding: 20px 30px !important;
+    border-top: 1px solid rgba(224, 169, 109, 0.2) !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unc-sign-line {
+    border-bottom: 1px solid #e0a96d !important;
+    width: 150px;
+    height: 30px;
+    position: relative;
+}
+
+.unc-sign-label {
+    font-size: 9px !important;
+    color: #8d99ae !important;
+    margin-top: 4px !important;
+    text-align: right;
+}
+
+.unc-sign-text {
+    font-family: 'Brush Script MT', cursive, sans-serif !important;
+    font-size: 20px !important;
+    color: #e0a96d !important;
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+}

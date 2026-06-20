@@ -1,0 +1,78 @@
+/* 1. 홀로그램 팝업 (Neural Popup) */
+.neural-popup-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 0;
+    padding-left: 20px;
+    perspective: 800px;
+}
+
+.neural-popup {
+    width: 100%;
+    max-width: 360px;
+    background: rgba(20, 25, 40, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 150, 255, 0.3) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    animation: p-float 3s ease-in-out infinite, p-enter 0.5s ease-out;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+}
+
+@keyframes p-enter {
+    from { opacity: 0; transform: translateY(20px) rotateX(-10deg); }
+    to { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+
+@keyframes p-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.p-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.p-icon { font-size: 16px; filter: drop-shadow(0 0 5px #0096ff); }
+.p-title {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+    color: rgba(0, 150, 255, 0.8) !important;
+}
+
+.p-close {
+    margin-left: auto;
+    font-size: 18px !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    cursor: default;
+}
+
+.p-body {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #ffffff !important;
+    word-break: keep-all;
+}
+
+.p-highlight {
+    color: #00d4ff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.p-indicator {
+    position: absolute;
+    bottom: -1px;
+    left: 20%;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #0096ff, transparent);
+}

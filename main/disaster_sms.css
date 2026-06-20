@@ -1,0 +1,45 @@
+/* 5. 긴급재난문자 (Disaster SMS) */
+.disaster-sms-wrapper {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.disaster-sms {
+    background: #fffbe6 !important;
+    border: 2px solid #ff9900 !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    max-width: 450px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.disaster-sms-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.disaster-sms-tag {
+    background: #ff9900 !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    margin-right: 10px !important;
+}
+
+.disaster-sms-sender {
+    font-size: 11px !important;
+    color: #666 !important;
+    font-weight: 600 !important;
+}
+
+.disaster-sms-body {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    line-height: 1.5 !important;
+    word-break: keep-all;
+}

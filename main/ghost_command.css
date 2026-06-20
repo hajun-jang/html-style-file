@@ -1,0 +1,53 @@
+/* 2. 홀로그램 셸 명령어 (Ghost Command) */
+.ghost-command-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 0;
+    padding-left: 20px;
+}
+
+.ghost-command {
+    font-family: 'Fira Code', 'JetBrains Mono', monospace !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #00f2ff !important;
+    text-shadow: 
+        0 0 10px rgba(0, 242, 255, 0.7),
+        0 0 20px rgba(0, 242, 255, 0.3);
+    position: relative;
+    padding: 10px 0 !important;
+    letter-spacing: 2px !important;
+    animation: g-floating 3s ease-in-out infinite;
+}
+
+@keyframes g-floating {
+    0%, 100% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(-5px); opacity: 1; }
+}
+
+.g-prefix {
+    margin-right: 15px !important;
+    color: rgba(0, 242, 255, 0.4) !important;
+    animation: g-pulse 1.5s infinite;
+}
+
+.g-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: #00f2ff;
+    margin-left: 10px;
+    vertical-align: middle;
+    box-shadow: 0 0 10px #00f2ff;
+    animation: g-blink 1s step-end infinite;
+}
+
+@keyframes g-blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes g-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
