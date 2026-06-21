@@ -107,11 +107,11 @@
                 this.baseX = this.x;
                 this.baseY = this.y;
 
-                const coreRadius = 30; // 중심원 크기 확장
-                const innerRingRadius = 45; // 안쪽 링 반지름
-                const rainbowRingRadius = 65; // 바깥 무지개 링 반지름
+                const coreRadius = 16; // 중심원 크기 조정
+                const innerRingRadius = 24; // 안쪽 링 반지름
+                const rainbowRingRadius = 34; // 바깥 무지개 링 반지름
 
-                ctx.shadowBlur = 45;
+                ctx.shadowBlur = 30;
                 ctx.shadowColor = "#4cc9f0";
                 ctx.fillStyle = "#ffffff";
 
@@ -123,7 +123,7 @@
                 ctx.translate(this.x, this.y);
                 ctx.rotate(performance.now() * 0.00035);
 
-                ctx.shadowBlur = 30;
+                ctx.shadowBlur = 15;
                 ctx.shadowColor = "#ffffff";
 
                 const rainbow = ctx.createConicGradient(0, 0, 0);
@@ -136,16 +136,16 @@
                 rainbow.addColorStop(0.90, "#ff00d4");
                 rainbow.addColorStop(1.00, "#ff004c");
 
-                ctx.lineWidth = 14; // 선 두께 확장
+                ctx.lineWidth = 7; // 선 두께 조정
                 ctx.strokeStyle = rainbow;
 
                 ctx.beginPath();
                 ctx.arc(0, 0, rainbowRingRadius, 0, Math.PI * 2);
                 ctx.stroke();
 
-                ctx.shadowBlur = 15;
+                ctx.shadowBlur = 10;
                 ctx.strokeStyle = "rgba(255,255,255,0.9)";
-                ctx.lineWidth = 2.5;
+                ctx.lineWidth = 2;
 
                 ctx.beginPath();
                 ctx.arc(0, 0, innerRingRadius, 0, Math.PI * 2);
@@ -159,7 +159,7 @@
                     ctx.font = '14px "Gowun Batang"';
                     ctx.textAlign = "center";
                     ctx.fillStyle = "rgba(255,255,255,0.9)";
-                    ctx.fillText("하이퍼디멘션 코어", this.x, this.y - rainbowRingRadius - 28);
+                    ctx.fillText("하이퍼디멘션 코어", this.x, this.y - rainbowRingRadius - 16);
                     coreTextDrawn = true;
                 }
                 ctx.restore();
