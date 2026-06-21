@@ -20,6 +20,7 @@
     // STARS
     // =========================
     let running = true;
+    let coreTextDrawn = false; // 코어 텍스트 중복 드로잉 방지 플래그
     let animationId = null;
     const stars = [];
 
@@ -148,12 +149,15 @@
 
             ctx.restore();
 
-            // 이름 표시
-            ctx.shadowBlur = 0; // 글씨 주변에 파란색 안개 테두리가 생겨 번지는 현상 방지
-            ctx.font = '14px "Gowun Batang"';
-            ctx.textAlign = "center";
-            ctx.fillStyle = "rgba(255,255,255,0.9)";
-            ctx.fillText(this.name, this.x, this.y - this.radius - 22);
+            // 이름 표시 (여러 코어 노드가 겹쳐서 글씨가 깨지는 현상 방지 - 프레임당 1회 렌더링)
+            if (!coreTextDrawn) {
+                ctx.shadowBlur = 0; // 글씨 주변에 파란색 안개 테두리가 생겨 번지는 현상 방지
+                ctx.font = '14px "Gowun Batang"';
+                ctx.textAlign = "center";
+                ctx.fillStyle = "rgba(255,255,255,0.9)";
+                ctx.fillText("하이퍼디멘션 코어", this.x, this.y - this.radius - 22);
+                coreTextDrawn = true;
+            }
             ctx.restore();
             return;
             }
@@ -263,6 +267,7 @@
     function render(t) {
         if (!running) return;
 
+        coreTextDrawn = false; // 매 프레임마다 드로잉 플래그 초기화
         animationId = requestAnimationFrame(render);
 
         // background
