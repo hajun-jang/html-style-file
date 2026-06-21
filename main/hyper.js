@@ -1,4 +1,4 @@
-/* hyper.js - 하이퍼디멘션 코어 네트워크 애니메이션 */
+/* hyper.js - 네트워크 애니메이션 */
 
 (() => {
     const canvas = document.getElementById("hyper-canvas");
@@ -99,7 +99,7 @@
             ctx.shadowColor = this.color;
             ctx.fillStyle = "#000000";
 
-            // 하이퍼디멘션 코어 특수 디자인
+            // 코어 특수 디자인
             if (this.color === "render.core") {
                 this.x = W / 2;
                 this.y = H / 2;
