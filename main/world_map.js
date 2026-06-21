@@ -65,8 +65,8 @@
     function showCountryInfo(numericId) {
         if (!countriesData) return;
 
-        // D3의 numericId는 숫자형이므로, c.numeric_code (3자리 문자열)와 매칭
-        const country = countriesData.find(c => parseInt(c.numeric_code) === numericId);
+        // D3의 numericId와 c.numeric_code를 모두 정수로 파싱하여 매칭 (타입 불일치 방지)
+        const country = countriesData.find(c => parseInt(c.numeric_code) === parseInt(numericId));
 
         if (country) {
             const info = {
