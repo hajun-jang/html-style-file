@@ -107,59 +107,63 @@
                 this.baseX = this.x;
                 this.baseY = this.y;
 
-                ctx.shadowBlur = 40;
+                const coreRadius = 30; // 중심원 크기 확장
+                const innerRingRadius = 45; // 안쪽 링 반지름
+                const rainbowRingRadius = 65; // 바깥 무지개 링 반지름
+
+                ctx.shadowBlur = 45;
                 ctx.shadowColor = "#4cc9f0";
                 ctx.fillStyle = "#ffffff";
 
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius + 4, 0, Math.PI * 2);
+                ctx.arc(this.x, this.y, coreRadius, 0, Math.PI * 2);
                 ctx.fill();
 
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.rotate(performance.now() * 0.00035);
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(performance.now() * 0.00035);
 
-            ctx.shadowBlur = 25;
-            ctx.shadowColor = "#ffffff";
+                ctx.shadowBlur = 30;
+                ctx.shadowColor = "#ffffff";
 
-            const rainbow = ctx.createConicGradient(0, 0, 0);
-            rainbow.addColorStop(0.00, "#ff004c");
-            rainbow.addColorStop(0.15, "#ff7b00");
-            rainbow.addColorStop(0.30, "#ffe600");
-            rainbow.addColorStop(0.45, "#00ff95");
-            rainbow.addColorStop(0.60, "#00c3ff");
-            rainbow.addColorStop(0.75, "#6a5cff");
-            rainbow.addColorStop(0.90, "#ff00d4");
-            rainbow.addColorStop(1.00, "#ff004c");
+                const rainbow = ctx.createConicGradient(0, 0, 0);
+                rainbow.addColorStop(0.00, "#ff004c");
+                rainbow.addColorStop(0.15, "#ff7b00");
+                rainbow.addColorStop(0.30, "#ffe600");
+                rainbow.addColorStop(0.45, "#00ff95");
+                rainbow.addColorStop(0.60, "#00c3ff");
+                rainbow.addColorStop(0.75, "#6a5cff");
+                rainbow.addColorStop(0.90, "#ff00d4");
+                rainbow.addColorStop(1.00, "#ff004c");
 
-            ctx.lineWidth = 8;
-            ctx.strokeStyle = rainbow;
+                ctx.lineWidth = 14; // 선 두께 확장
+                ctx.strokeStyle = rainbow;
 
-            ctx.beginPath();
-            ctx.arc(0, 0, this.radius + 14, 0, Math.PI * 2);
-            ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(0, 0, rainbowRingRadius, 0, Math.PI * 2);
+                ctx.stroke();
 
-            ctx.shadowBlur = 10;
-            ctx.strokeStyle = "rgba(255,255,255,0.9)";
-            ctx.lineWidth = 2;
+                ctx.shadowBlur = 15;
+                ctx.strokeStyle = "rgba(255,255,255,0.9)";
+                ctx.lineWidth = 2.5;
 
-            ctx.beginPath();
-            ctx.arc(0, 0, this.radius + 7, 0, Math.PI * 2);
-            ctx.stroke();
+                ctx.beginPath();
+                ctx.arc(0, 0, innerRingRadius, 0, Math.PI * 2);
+                ctx.stroke();
 
-            ctx.restore();
+                ctx.restore();
 
-            // 이름 표시 (여러 코어 노드가 겹쳐서 글씨가 깨지는 현상 방지 - 프레임당 1회 렌더링)
-            if (!coreTextDrawn) {
-                ctx.shadowBlur = 0; // 글씨 주변에 파란색 안개 테두리가 생겨 번지는 현상 방지
-                ctx.font = '14px "Gowun Batang"';
-                ctx.textAlign = "center";
-                ctx.fillStyle = "rgba(255,255,255,0.9)";
-                ctx.fillText("하이퍼디멘션 코어", this.x, this.y - this.radius - 22);
-                coreTextDrawn = true;
-            }
-            ctx.restore();
-            return;
+                // 이름 표시 (여러 코어 노드가 겹쳐서 글씨가 깨지는 현상 방지 - 프레임당 1회 렌더링)
+                if (!coreTextDrawn) {
+                    ctx.shadowBlur = 0; // 글씨 주변에 파란색 안개 테두리가 생겨 번지는 현상 방지
+                    ctx.font = '14px "Gowun Batang"';
+                    ctx.textAlign = "center";
+                    ctx.fillStyle = "rgba(255,255,255,0.9)";
+                    ctx.fillText("하이퍼디멘션 코어", this.x, this.y - rainbowRingRadius - 28);
+                    coreTextDrawn = true;
+                }
+                ctx.restore();
+                return;
             }
 
             ctx.beginPath();
