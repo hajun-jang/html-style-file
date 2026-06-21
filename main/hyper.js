@@ -20,7 +20,6 @@
     // STARS
     // =========================
     let running = true;
-    let coreTextDrawn = false; // 코어 텍스트 중복 드로잉 방지 플래그
     let animationId = null;
     const stars = [];
 
@@ -86,18 +85,18 @@
             // 원래 위치 복귀
             this.vx += (this.baseX - this.x) * 0.004;
             this.vy += (this.baseY - this.y) * 0.004;
-
             this.vx *= 0.94;
             this.vy *= 0.94;
-
             this.x += this.vx;
             this.y += this.vy;
         }
 
         draw() {
             ctx.save();
+            // glow
             ctx.shadowBlur = 0;
             ctx.shadowColor = this.color;
+            // 검은 중심
             ctx.fillStyle = "#000000";
 
             // 코어 특수 디자인
@@ -107,25 +106,25 @@
                 this.baseX = this.x;
                 this.baseY = this.y;
 
-                const coreRadius = 16; // 중심원 크기 조정
-                const innerRingRadius = 24; // 안쪽 링 반지름
-                const rainbowRingRadius = 34; // 바깥 무지개 링 반지름
-
-                ctx.shadowBlur = 30;
+                ctx.shadowBlur = 40;
                 ctx.shadowColor = "#4cc9f0";
-                ctx.fillStyle = "#ffffff";
 
+                // 흰 중심
+                ctx.fillStyle = "#ffffff";
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, coreRadius, 0, Math.PI * 2);
+                ctx.arc(this.x, this.y, this.radius + 4, 0, Math.PI * 2);
                 ctx.fill();
 
+                // 무지개 도넛 링
                 ctx.save();
                 ctx.translate(this.x, this.y);
                 ctx.rotate(performance.now() * 0.00035);
 
-                ctx.shadowBlur = 15;
+                // glow
+                ctx.shadowBlur = 25;
                 ctx.shadowColor = "#ffffff";
 
+                // 무지개 gradient
                 const rainbow = ctx.createConicGradient(0, 0, 0);
                 rainbow.addColorStop(0.00, "#ff004c");
                 rainbow.addColorStop(0.15, "#ff7b00");
@@ -136,32 +135,28 @@
                 rainbow.addColorStop(0.90, "#ff00d4");
                 rainbow.addColorStop(1.00, "#ff004c");
 
-                ctx.lineWidth = 7; // 선 두께 조정
+                // 굵은 도넛 링
+                ctx.lineWidth = 8;
                 ctx.strokeStyle = rainbow;
-
                 ctx.beginPath();
-                ctx.arc(0, 0, rainbowRingRadius, 0, Math.PI * 2);
+                ctx.arc(0, 0, this.radius + 14, 0, Math.PI * 2);
                 ctx.stroke();
 
+                // 안쪽 흰 링
                 ctx.shadowBlur = 10;
                 ctx.strokeStyle = "rgba(255,255,255,0.9)";
                 ctx.lineWidth = 2;
-
                 ctx.beginPath();
-                ctx.arc(0, 0, innerRingRadius, 0, Math.PI * 2);
+                ctx.arc(0, 0, this.radius + 7, 0, Math.PI * 2);
                 ctx.stroke();
 
                 ctx.restore();
 
-                // 이름 표시 (여러 코어 노드가 겹쳐서 글씨가 깨지는 현상 방지 - 프레임당 1회 렌더링)
-                if (!coreTextDrawn) {
-                    ctx.shadowBlur = 0; // 글씨 주변에 파란색 안개 테두리가 생겨 번지는 현상 방지
-                    ctx.font = '14px "Gowun Batang"';
-                    ctx.textAlign = "center";
-                    ctx.fillStyle = "rgba(255,255,255,0.9)";
-                    ctx.fillText("하이퍼디멘션 코어", this.x, this.y - rainbowRingRadius - 16);
-                    coreTextDrawn = true;
-                }
+                // 이름 표시
+                ctx.font = '14px "Gowun Batang"';
+                ctx.textAlign = "center";
+                ctx.fillStyle = "rgba(255,255,255,0.9)";
+                ctx.fillText(this.name, this.x, this.y - this.radius - 22);
                 ctx.restore();
                 return;
             }
@@ -170,9 +165,9 @@
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
 
+            // glowing border
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 1.2;
-
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius + 1, 0, Math.PI * 2);
             ctx.stroke();
@@ -240,7 +235,6 @@
             for (const target of node.links) {
                 ctx.strokeStyle = "rgba(255,255,255,0.5)";
                 ctx.globalAlpha = 0.13;
-
                 ctx.beginPath();
                 ctx.moveTo(node.x, node.y);
                 ctx.lineTo(target.x, target.y);
@@ -258,7 +252,6 @@
         ctx.shadowBlur = 35;
         ctx.shadowColor = "#4cc9f0";
         ctx.fillStyle = "#ffffff";
-
         ctx.beginPath();
         ctx.arc(mx, my, 5, 0, Math.PI * 2);
         ctx.fill();
@@ -270,8 +263,6 @@
     // =========================
     function render(t) {
         if (!running) return;
-
-        coreTextDrawn = false; // 매 프레임마다 드로잉 플래그 초기화
         animationId = requestAnimationFrame(render);
 
         // background
@@ -297,7 +288,6 @@
             s.a += s.s;
             const alpha = Math.sin(s.a) * 0.5 + 0.5;
             ctx.fillStyle = `rgba(255,255,255,${alpha * 0.8})`;
-
             ctx.beginPath();
             ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
             ctx.fill();
@@ -328,29 +318,30 @@
     const pauseBtn = document.getElementById("pause-btn");
     const restartBtn = document.getElementById("restart-btn");
 
-    if (pauseBtn) {
-        pauseBtn.addEventListener("click", () => {
-            running = false;
-            cancelAnimationFrame(animationId);
-        });
-    }
+    // 완전 정지
+    pauseBtn.addEventListener("click", () => {
+        running = false;
+        cancelAnimationFrame(animationId);
+    });
 
-    if (restartBtn) {
-        restartBtn.addEventListener("click", () => {
-            running = false;
-            cancelAnimationFrame(animationId);
+    // 전체 재시작
+    restartBtn.addEventListener("click", () => {
+        // 기존 루프 종료
+        running = false;
+        cancelAnimationFrame(animationId);
 
-            for (const node of allNodes) {
-                node.x = Math.random() * W;
-                node.y = Math.random() * H;
-                node.baseX = node.x;
-                node.baseY = node.y;
-                node.vx = 0;
-                node.vy = 0;
-            }
+        // 위치 재설정
+        for (const node of allNodes) {
+            node.x = Math.random() * W;
+            node.y = Math.random() * H;
+            node.baseX = node.x;
+            node.baseY = node.y;
+            node.vx = 0;
+            node.vy = 0;
+        }
 
-            running = true;
-            render(performance.now());
-        });
-    }
+        // 재시작
+        running = true;
+        render(performance.now());
+    });
 })();
