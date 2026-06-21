@@ -114,39 +114,39 @@
                 ctx.arc(this.x, this.y, this.radius + 4, 0, Math.PI * 2);
                 ctx.fill();
 
-                ctx.save();
-                ctx.translate(this.x, this.y);
-                ctx.rotate(performance.now() * 0.00035);
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(performance.now() * 0.00035);
 
-                ctx.shadowBlur = 25;
-                ctx.shadowColor = "#ffffff";
+            ctx.shadowBlur = 25;
+            ctx.shadowColor = "#ffffff";
 
-                const rainbow = ctx.createConicGradient(0, 0, 0);
-                rainbow.addColorStop(0.00, "#ff004c");
-                rainbow.addColorStop(0.15, "#ff7b00");
-                rainbow.addColorStop(0.30, "#ffe600");
-                rainbow.addColorStop(0.45, "#00ff95");
-                rainbow.addColorStop(0.60, "#00c3ff");
-                rainbow.addColorStop(0.75, "#6a5cff");
-                rainbow.addColorStop(0.90, "#ff00d4");
-                rainbow.addColorStop(1.00, "#ff004c");
+            const rainbow = ctx.createConicGradient(0, 0, 0);
+            rainbow.addColorStop(0.00, "#ff004c");
+            rainbow.addColorStop(0.15, "#ff7b00");
+            rainbow.addColorStop(0.30, "#ffe600");
+            rainbow.addColorStop(0.45, "#00ff95");
+            rainbow.addColorStop(0.60, "#00c3ff");
+            rainbow.addColorStop(0.75, "#6a5cff");
+            rainbow.addColorStop(0.90, "#ff00d4");
+            rainbow.addColorStop(1.00, "#ff004c");
 
-                ctx.lineWidth = 8;
-                ctx.strokeStyle = rainbow;
+            ctx.lineWidth = 8;
+            ctx.strokeStyle = rainbow;
 
-                ctx.beginPath();
-                ctx.arc(0, 0, this.radius + 14, 0, Math.PI * 2);
-                ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(0, 0, this.radius + 14, 0, Math.PI * 2);
+            ctx.stroke();
 
-                ctx.shadowBlur = 10;
-                ctx.strokeStyle = "rgba(255,255,255,0.9)";
-                ctx.lineWidth = 2;
+            ctx.shadowBlur = 10;
+            ctx.strokeStyle = "rgba(255,255,255,0.9)";
+            ctx.lineWidth = 2;
 
-                ctx.beginPath();
-                ctx.arc(0, 0, this.radius + 7, 0, Math.PI * 2);
-                ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(0, 0, this.radius + 7, 0, Math.PI * 2);
+            ctx.stroke();
 
-                ctx.restore();
+            ctx.restore();
 
                 // 이름 표시
                 ctx.font = '14px "Gowun Batang"';
