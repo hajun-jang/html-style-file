@@ -1,17 +1,10 @@
 /* guardian_ui.css - Generated from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.pulse-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, rgba(0, 255, 127, 0.05) 0%, transparent 70%);
-    animation: guardian-pulse 3s ease-in-out infinite;
-    pointer-events: none;
-}
-
-.shield-icon {
-    font-size: 20px;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 127, 0.5));
+.info-value {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .guardian-content {
@@ -20,35 +13,19 @@
     gap: 18px;
 }
 
-.info-value {
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.auth-check {
-    color: #00ff7f;
-    font-weight: bold;
-}
-
-.auth-status {
-    margin-top: 10px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+.guardian-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 13px;
-    font-style: italic;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
-.guardian-ui-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    margin: 55px 0;
-    padding-left: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.guardian-status {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #00ff7f;
+    text-transform: uppercase;
 }
 
 .priority-label {
@@ -57,18 +34,9 @@
     font-weight: 500;
 }
 
-.guardian-ui-box {
-    width: 100%;
-    max-width: 520px;
-    background: linear-gradient(145deg, rgba(5, 25, 15, 0.95), rgba(0, 10, 5, 0.98));
-    border: 1px solid rgba(0, 255, 127, 0.2);
-    border-radius: 16px;
-    padding: 30px;
-    position: relative;
-    box-shadow: 
-        0 15px 40px rgba(0, 0, 0, 0.6),
-        inset 0 0 20px rgba(0, 255, 127, 0.05);
-    overflow: hidden;
+.shield-icon {
+    font-size: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 127, 0.5));
 }
 
 .priority-level {
@@ -108,18 +76,50 @@
     border: 1px solid rgba(255, 0, 0, 0.2);
 }
 
-.guardian-status {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
-    color: #00ff7f;
-    text-transform: uppercase;
-}
-
-.guardian-header {
+.auth-status {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    font-style: italic;
+}
+
+.guardian-ui-box {
+    width: 100%;
+    max-width: 520px;
+    background: linear-gradient(145deg, rgba(5, 25, 15, 0.95), rgba(0, 10, 5, 0.98));
+    border: 1px solid rgba(0, 255, 127, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(0, 255, 127, 0.05);
+    overflow: hidden;
+}
+
+.pulse-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0, 255, 127, 0.05) 0%, transparent 70%);
+    animation: guardian-pulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.auth-check {
+    color: #00ff7f;
+    font-weight: bold;
+}
+
+.guardian-ui-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 55px 0;
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

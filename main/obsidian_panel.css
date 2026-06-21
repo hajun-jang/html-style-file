@@ -1,14 +1,6 @@
 /* obsidian_panel.css - Generated from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.panel-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
-    letter-spacing: 3px;
-    text-shadow: 0 0 10px rgba(160, 0, 255, 0.5);
-}
-
 .settings-list {
     list-style: none;
     padding: 0;
@@ -29,26 +21,6 @@
     color: #ffffff;
     padding-left: 10px;
     background: rgba(160, 0, 255, 0.05);
-}
-
-.hologram-flicker {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(transparent 50%, rgba(160, 0, 255, 0.02) 50%);
-    background-size: 100% 4px;
-    pointer-events: none;
-    animation: obsidian-flicker 0.2s infinite;
-}
-
-.admin-chip {
-    font-size: 10px;
-    color: #a000ff;
-    background: rgba(160, 0, 255, 0.1);
-    padding: 2px 8px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
 }
 
 .bullet {
@@ -80,24 +52,21 @@
     padding-left: 20px;
 }
 
-.admin-cmd {
-    margin-top: 10px;
-    color: #ff0077 !important;
-    font-weight: bold;
+.hologram-flicker {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 50%, rgba(160, 0, 255, 0.02) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    animation: obsidian-flicker 0.2s infinite;
 }
 
-.status-on {
-    margin-left: auto;
-    font-size: 10px;
-    color: #00ffaa;
+.panel-title {
+    font-size: 20px;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(0, 255, 170, 0.5);
-}
-
-.panel-header {
-    margin-bottom: 25px;
-    border-bottom: 1px solid rgba(150, 0, 255, 0.2);
-    padding-bottom: 15px;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(160, 0, 255, 0.5);
 }
 
 .obsidian-panel {
@@ -111,5 +80,36 @@
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(150, 0, 255, 0.1);
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
     overflow: hidden;
+}
+
+.admin-cmd {
+    margin-top: 10px;
+    color: #ff0077 !important;
+    font-weight: bold;
+}
+
+.panel-header {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(150, 0, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.admin-chip {
+    font-size: 10px;
+    color: #a000ff;
+    background: rgba(160, 0, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.status-on {
+    margin-left: auto;
+    font-size: 10px;
+    color: #00ffaa;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 255, 170, 0.5);
 }
 

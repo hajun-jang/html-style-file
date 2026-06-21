@@ -1,45 +1,28 @@
 /* censored-ledger.css - Generated from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.c-ledger-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-}
-
-.warning-tape {
-    position: absolute;
-    bottom: 10px;
-    right: -50px;
-    background: #ff0033;
-    color: #fff;
-    font-size: 9px;
+.c-ledger-title {
+    font-size: 24px;
     font-weight: 900;
-    padding: 5px 60px;
-    transform: rotate(-35deg);
-    letter-spacing: 2px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    letter-spacing: 1px;
+    color: #fff;
 }
 
-.c-ledger-tag {
-    font-size: 10px;
+.c-priority-tag {
+    font-size: 9px;
     font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    background: rgba(255, 0, 0, 0.1);
     color: #ff0033;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.2);
 }
 
 .c-ledger-header {
     border-bottom: 2px solid #ff0033;
     padding-bottom: 25px;
     margin-bottom: 30px;
-}
-
-.c-ledger-body {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
 .censored-ledger-wrapper {
@@ -65,13 +48,6 @@
     color: #e0e0e0;
 }
 
-.c-ledger-title {
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #fff;
-}
-
 .c-ledger-item {
     display: flex;
     align-items: center;
@@ -81,25 +57,49 @@
     opacity: 0.8;
 }
 
-.c-goal-text {
-    font-size: 15px;
-    font-weight: 500;
-    color: #bbbbbb;
-}
-
-.c-priority-tag {
+.warning-tape {
+    position: absolute;
+    bottom: 10px;
+    right: -50px;
+    background: #ff0033;
+    color: #fff;
     font-size: 9px;
-    font-weight: 800;
-    padding: 3px 8px;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    background: rgba(255, 0, 0, 0.1);
-    color: #ff0033;
-    border: 1px solid rgba(255, 0, 0, 0.2);
+    font-weight: 900;
+    padding: 5px 60px;
+    transform: rotate(-35deg);
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
 .lock-icon {
     font-size: 14px;
     color: #ff0033;
+}
+
+.c-ledger-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.c-ledger-tag {
+    font-size: 10px;
+    font-weight: 800;
+    color: #ff0033;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.c-ledger-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.c-goal-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #bbbbbb;
 }
 

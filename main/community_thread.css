@@ -1,39 +1,24 @@
 /* community_thread.css - Generated from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.highlight-item {
-    border-left: 4px solid #007aff;
-    background: rgba(0, 122, 255, 0.05);
-}
-
-.danger-item {
-    border-left: 4px solid #ff3b30;
-    background: rgba(255, 59, 48, 0.05);
-}
-
-.ct-header {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #333;
-    margin-bottom: 20px;
-}
-
-.ct-count {
-    font-size: 10px;
-    color: #007aff;
-}
-
 .ct-footer {
     margin-top: 10px;
     font-size: 11px;
     color: #666;
 }
 
-.ct-body {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.ct-msg {
+    font-size: 14px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.ct-user {
+    font-size: 11px;
+    font-weight: 700;
+    color: #aaa;
+    margin-bottom: 8px;
 }
 
 .ct-input-mimic {
@@ -45,17 +30,26 @@
     font-size: 13px;
 }
 
-.ct-item {
-    background: #1e1e1e;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #2c2c2c;
-    transition: transform 0.2s;
+.ct-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #888;
+    letter-spacing: 1px;
 }
 
-.ct-item:hover {
-    transform: translateX(5px);
-    border-color: #444;
+.danger-item {
+    border-left: 4px solid #ff3b30;
+    background: rgba(255, 59, 48, 0.05);
+}
+
+.ct-count {
+    font-size: 10px;
+    color: #007aff;
+}
+
+.highlight-item {
+    border-left: 4px solid #007aff;
+    background: rgba(0, 122, 255, 0.05);
 }
 
 .community-thread-wrapper {
@@ -63,11 +57,10 @@
     padding-left: 20px;
 }
 
-.ct-title {
-    font-size: 11px;
-    font-weight: 800;
-    color: #888;
-    letter-spacing: 1px;
+.ct-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .community-thread {
@@ -82,17 +75,24 @@
     overflow: hidden;
 }
 
-.ct-user {
-    font-size: 11px;
-    font-weight: 700;
-    color: #aaa;
-    margin-bottom: 8px;
+.ct-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
 }
 
-.ct-msg {
-    font-size: 14px;
-    color: #e0e0e0;
-    line-height: 1.5;
-    word-break: keep-all;
+.ct-item {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #2c2c2c;
+    transition: transform 0.2s;
+}
+
+.ct-item:hover {
+    transform: translateX(5px);
+    border-color: #444;
 }
 

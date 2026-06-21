@@ -1,58 +1,19 @@
 /* hierarchy_tree.css - Generated from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.tier-universe-group { color: #c77dff; }
-
-.tree-header {
+.hierarchy-tree-wrapper {
     display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 229, 255, 0.15);
-    padding-bottom: 12px;
-    margin-bottom: 16px;
+    justify-content: flex-start;
+    margin: 40px 0;
+    padding-left: 20px;
+    font-family: 'Consolas', monospace;
 }
-
-.tier-dimension { color: #ffb703; }
-
-.tree-branch-line {
-    color: rgba(0, 229, 255, 0.15);
-    font-size: 13px;
-    line-height: 1;
-    height: 10px;
-    padding-left: 6px;
-}
-
-.tier-universe { color: #00ff88; }
 
 .tree-title {
     color: #00e5ff;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.5px;
-}
-
-.tree-joint {
-    color: rgba(0, 229, 255, 0.4);
-    margin-right: 8px;
-    font-weight: bold;
-}
-
-.tree-body {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.tree-icon {
-    font-size: 16px;
-    margin-right: 10px;
-    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.5));
-}
-
-.tree-item {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    color: #e2e8f0;
 }
 
 .tree-bullet {
@@ -62,15 +23,36 @@
     text-shadow: 0 0 5px #ff007f;
 }
 
-.tier-core { color: #ffffff; font-weight: bold; }
-
-.hierarchy-tree-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    margin: 40px 0;
-    padding-left: 20px;
-    font-family: 'Consolas', monospace;
+.tree-joint {
+    color: rgba(0, 229, 255, 0.4);
+    margin-right: 8px;
+    font-weight: bold;
 }
+
+.tree-icon {
+    font-size: 16px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.5));
+}
+
+.tree-branch-line {
+    color: rgba(0, 229, 255, 0.15);
+    font-size: 13px;
+    line-height: 1;
+    height: 10px;
+    padding-left: 6px;
+}
+
+.tree-item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #e2e8f0;
+}
+
+.tier-universe-group { color: #c77dff; }
+
+.tier-universe { color: #00ff88; }
 
 .hierarchy-tree {
     position: relative;
@@ -82,6 +64,24 @@
     padding: 22px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+}
+
+.tier-dimension { color: #ffb703; }
+
+.tree-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.tier-core { color: #ffffff; font-weight: bold; }
+
+.tree-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 /* --- Inline Extracted Styles --- */

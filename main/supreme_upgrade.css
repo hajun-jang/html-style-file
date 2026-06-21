@@ -1,6 +1,13 @@
 /* supreme_upgrade.css - Generated from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
+.su-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
 .su-glow {
     position: absolute;
     top: -50%; left: -50%; width: 200%; height: 200%;
@@ -8,12 +15,11 @@
     animation: su-rotate 20s linear infinite;
 }
 
-.su-tag {
-    font-size: 10px;
-    font-weight: 800;
-    color: #ffd700;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
+.su-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
 .su-item {
@@ -25,21 +31,7 @@
     font-weight: 500;
 }
 
-.su-title {
-    font-size: 26px;
-    font-weight: 900;
-    color: #fff;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-}
-
-.su-header {
-    position: relative;
-    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-}
-
-.su-text { color: #fff; }
+.su-icon { color: #ffd700; filter: drop-shadow(0 0 5px #ffd700); }
 
 .supreme-upgrade-wrapper {
     display: flex;
@@ -60,12 +52,20 @@
     box-shadow: 0 30px 70px rgba(0,0,0,0.8), 0 0 30px rgba(255, 215, 0, 0.1);
 }
 
-.su-icon { color: #ffd700; filter: drop-shadow(0 0 5px #ffd700); }
-
-.su-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+.su-tag {
+    font-size: 10px;
+    font-weight: 800;
+    color: #ffd700;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
 }
+
+.su-header {
+    position: relative;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.su-text { color: #fff; }
 

@@ -1,11 +1,11 @@
 /* nebula_archive.css - Generated from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.nebula-access-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    position: relative;
+.highlight-blue { color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+
+.access-bullet {
+    color: #00d4ff;
+    margin-right: 12px;
 }
 
 .unit {
@@ -32,43 +32,28 @@
     overflow: hidden;
 }
 
+.nebula-archive-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 60px 0;
+    padding-left: 20px;
+}
+
 .glow-text {
     text-shadow: 0 0 10px #00d4ff;
 }
 
-.active {
-    font-size: 10px;
-    font-weight: 900;
-    background: rgba(0, 212, 255, 0.1);
-    color: #00d4ff;
-    padding: 2px 8px;
-    border-radius: 4px;
+.nebula-stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
 }
 
-.starfield {
-    position: absolute;
-    inset: 0;
-    background-image: 
-        radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
-        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-        radial-gradient(1px 1px at 150px 150px, #fff, rgba(0,0,0,0));
-    background-size: 200px 200px;
-    opacity: 0.3;
-    animation: nebula-stars 60s linear infinite;
-}
-
-.stat-value {
-    font-size: 24px;
-    font-weight: 800;
-    color: #fff;
-}
-
-.access-item {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.7);
+.access-name {
+    flex: 1;
+    font-weight: 500;
 }
 
 .nebula-grid {
@@ -79,22 +64,11 @@
     position: relative;
 }
 
-.access-name {
-    flex: 1;
-    font-weight: 500;
-}
-
-.nebula-header {
+.access-item {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.access-bullet {
-    color: #00d4ff;
-    margin-right: 12px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .nebula-title {
@@ -103,24 +77,6 @@
     letter-spacing: 4px;
     color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
-}
-
-.highlight-blue { color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
-
-.nebula-archive-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    margin: 60px 0;
-    padding-left: 20px;
-}
-
-.universe-pulse {
-    width: 12px;
-    height: 12px;
-    background: #00d4ff;
-    border-radius: 50%;
-    box-shadow: 0 0 15px #00d4ff;
-    animation: universe-pulse-anim 2s infinite;
 }
 
 .nebula-archive {
@@ -136,20 +92,64 @@
     font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
-.nebula-stat-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
+.nebula-access-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
 }
 
-.highlight-gold { color: #ffd700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+.universe-pulse {
+    width: 12px;
+    height: 12px;
+    background: #00d4ff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00d4ff;
+    animation: universe-pulse-anim 2s infinite;
+}
+
+.nebula-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.active {
+    font-size: 10px;
+    font-weight: 900;
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+}
 
 .stat-label {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.4);
     margin-bottom: 8px;
     letter-spacing: 1px;
+}
+
+.highlight-gold { color: #ffd700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+
+.starfield {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 150px 150px, #fff, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    opacity: 0.3;
+    animation: nebula-stars 60s linear infinite;
 }
 
