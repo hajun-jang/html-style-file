@@ -100,7 +100,7 @@
             ctx.fillStyle = "#000000";
 
             // 하이퍼디멘션 코어 특수 디자인
-            if (this.name === "하이퍼디멘션 코어") {
+            if (this.color === "render.core") {
                 this.x = W / 2;
                 this.y = H / 2;
                 this.baseX = this.x;
