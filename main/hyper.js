@@ -148,13 +148,14 @@
 
             ctx.restore();
 
-                // 이름 표시
-                ctx.font = '14px "Gowun Batang"';
-                ctx.textAlign = "center";
-                ctx.fillStyle = "rgba(255,255,255,0.9)";
-                ctx.fillText(this.name, this.x, this.y - this.radius - 22);
-                ctx.restore();
-                return;
+            // 이름 표시
+            ctx.shadowBlur = 0; // 글씨 주변에 파란색 안개 테두리가 생겨 번지는 현상 방지
+            ctx.font = '14px "Gowun Batang"';
+            ctx.textAlign = "center";
+            ctx.fillStyle = "rgba(255,255,255,0.9)";
+            ctx.fillText(this.name, this.x, this.y - this.radius - 22);
+            ctx.restore();
+            return;
             }
 
             ctx.beginPath();
