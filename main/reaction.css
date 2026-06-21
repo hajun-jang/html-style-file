@@ -1,0 +1,42 @@
+/* reaction.css - Dynamically compiled from WORLD-EDITOR.md */
+
+/* --- Inline Extracted Styles --- */
+.reaction-panel-wrapper {
+    margin: 30px 0; padding-left: 20px; font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.reaction-card {
+    width: 100%; max-width: 360px; background: rgba(30, 10, 15, 0.85); border: 1px solid rgba(255, 70, 70, 0.4); border-radius: 12px; padding: 20px; box-shadow: 0 10px 25px rgba(255, 0, 0, 0.1), inset 0 0 10px rgba(255, 70, 70, 0.05); position: relative; color: #fff;
+}
+
+.reaction-auto-1 {
+    font-size: 9px; font-weight: 800; letter-spacing: 1.5px; color: #ff5555; text-transform: uppercase; margin-bottom: 12px; border-bottom: 1px solid rgba(255, 70, 70, 0.2); padding-bottom: 6px;
+}
+
+.reaction-auto-2 {
+    display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: rgba(255, 255, 255, 0.9);
+}
+
+.reaction-auto-3 {
+    display: flex; align-items: center; gap: 8px;
+}
+
+.reaction-auto-4 {
+    color: #ff5555;
+}
+
+.reaction-auto-5 {
+    display: flex; align-items: center; gap: 8px;
+}
+
+.reaction-auto-6 {
+    color: #ff5555;
+}
+
+.reaction-auto-7 {
+    display: flex; align-items: center; gap: 8px;
+}
+
+.reaction-auto-8 {
+    color: #ff5555;
+}

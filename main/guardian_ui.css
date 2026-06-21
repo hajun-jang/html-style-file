@@ -1,10 +1,9 @@
-/* guardian_ui.css - Generated from WORLD-EDITOR.md */
+/* guardian_ui.css - Dynamically compiled from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.info-value {
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
+.shield-icon {
+    font-size: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 127, 0.5));
 }
 
 .guardian-content {
@@ -13,36 +12,9 @@
     gap: 18px;
 }
 
-.guardian-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.guardian-status {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
+.auth-check {
     color: #00ff7f;
-    text-transform: uppercase;
-}
-
-.priority-label {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 500;
-}
-
-.shield-icon {
-    font-size: 20px;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 127, 0.5));
-}
-
-.priority-level {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-weight: bold;
 }
 
 .priority-tag {
@@ -76,6 +48,22 @@
     border: 1px solid rgba(255, 0, 0, 0.2);
 }
 
+.guardian-ui-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 55px 0;
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.guardian-status {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #00ff7f;
+    text-transform: uppercase;
+}
+
 .auth-status {
     margin-top: 10px;
     padding-top: 20px;
@@ -102,24 +90,36 @@
     overflow: hidden;
 }
 
+.priority-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.priority-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guardian-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-value {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
 .pulse-overlay {
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at center, rgba(0, 255, 127, 0.05) 0%, transparent 70%);
     animation: guardian-pulse 3s ease-in-out infinite;
     pointer-events: none;
-}
-
-.auth-check {
-    color: #00ff7f;
-    font-weight: bold;
-}
-
-.guardian-ui-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    margin: 55px 0;
-    padding-left: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

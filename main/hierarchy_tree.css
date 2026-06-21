@@ -1,40 +1,6 @@
-/* hierarchy_tree.css - Generated from WORLD-EDITOR.md */
+/* hierarchy_tree.css - Dynamically compiled from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.hierarchy-tree-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    margin: 40px 0;
-    padding-left: 20px;
-    font-family: 'Consolas', monospace;
-}
-
-.tree-title {
-    color: #00e5ff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-.tree-bullet {
-    color: #ff007f;
-    margin-right: 8px;
-    font-size: 10px;
-    text-shadow: 0 0 5px #ff007f;
-}
-
-.tree-joint {
-    color: rgba(0, 229, 255, 0.4);
-    margin-right: 8px;
-    font-weight: bold;
-}
-
-.tree-icon {
-    font-size: 16px;
-    margin-right: 10px;
-    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.5));
-}
-
 .tree-branch-line {
     color: rgba(0, 229, 255, 0.15);
     font-size: 13px;
@@ -43,6 +9,20 @@
     padding-left: 6px;
 }
 
+.tier-universe-group { color: #c77dff; }
+
+.tier-core { color: #ffffff; font-weight: bold; }
+
+.hierarchy-tree-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 0;
+    padding-left: 20px;
+    font-family: 'Consolas', monospace;
+}
+
+.tier-universe { color: #00ff88; }
+
 .tree-item {
     display: flex;
     align-items: center;
@@ -50,9 +30,11 @@
     color: #e2e8f0;
 }
 
-.tier-universe-group { color: #c77dff; }
-
-.tier-universe { color: #00ff88; }
+.tree-joint {
+    color: rgba(0, 229, 255, 0.4);
+    margin-right: 8px;
+    font-weight: bold;
+}
 
 .hierarchy-tree {
     position: relative;
@@ -68,20 +50,38 @@
 
 .tier-dimension { color: #ffb703; }
 
+.tree-bullet {
+    color: #ff007f;
+    margin-right: 8px;
+    font-size: 10px;
+    text-shadow: 0 0 5px #ff007f;
+}
+
+.tree-icon {
+    font-size: 16px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.5));
+}
+
+.tree-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tree-title {
+    color: #00e5ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
 .tree-header {
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(0, 229, 255, 0.15);
     padding-bottom: 12px;
     margin-bottom: 16px;
-}
-
-.tier-core { color: #ffffff; font-weight: bold; }
-
-.tree-body {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
 }
 
 /* --- Inline Extracted Styles --- */

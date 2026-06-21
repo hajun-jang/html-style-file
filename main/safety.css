@@ -1,0 +1,66 @@
+/* safety.css - Dynamically compiled from WORLD-EDITOR.md */
+
+/* --- Inline Extracted Styles --- */
+.safety-panel-wrapper {
+    margin: 30px 0; padding-left: 20px; font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.safety-card {
+    width: 100%; max-width: 400px; background: rgba(20, 15, 30, 0.9); border: 1px solid rgba(168, 85, 247, 0.4); border-radius: 12px; padding: 22px; box-shadow: 0 10px 25px rgba(168, 85, 247, 0.1), inset 0 0 15px rgba(168, 85, 247, 0.05); color: #fff;
+}
+
+.safety-auto-1 {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid rgba(168, 85, 247, 0.25); padding-bottom: 8px;
+}
+
+.safety-auto-2 {
+    font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: #c084fc;
+}
+
+.safety-auto-3 {
+    font-size: 8px; padding: 1px 4px; background: rgba(168, 85, 247, 0.2); border: 1px solid #c084fc; border-radius: 3px; color: #c084fc; font-weight: bold;
+}
+
+.safety-auto-4 {
+    display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: rgba(255, 255, 255, 0.95);
+}
+
+.safety-auto-5 {
+    display: flex; align-items: center; gap: 10px;
+}
+
+.safety-auto-6 {
+    color: #c084fc;
+}
+
+.safety-auto-7 {
+    display: flex; align-items: center; gap: 10px;
+}
+
+.safety-auto-8 {
+    color: #c084fc;
+}
+
+.safety-auto-9 {
+    display: flex; align-items: center; gap: 10px;
+}
+
+.safety-auto-10 {
+    color: #c084fc;
+}
+
+.safety-auto-11 {
+    display: flex; align-items: center; gap: 10px;
+}
+
+.safety-auto-12 {
+    color: #c084fc;
+}
+
+.safety-auto-13 {
+    display: flex; align-items: center; gap: 10px;
+}
+
+.safety-auto-14 {
+    color: #c084fc;
+}

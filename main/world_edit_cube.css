@@ -1,0 +1,101 @@
+/* world_edit_cube.css - Dynamically compiled from WORLD-EDITOR.md */
+
+/* --- Inline Extracted Styles --- */
+.world-edit-cube-auto-1 {
+    display:flex;
+        justify-content:flex-start;
+        align-items:flex-start;
+        overflow:hidden;
+        font-family:
+            Consolas,
+            monospace;
+        background:transparent;
+}
+
+.world-edit-cube-auto-2 {
+    position:absolute;
+            width:1200px;
+            height:1200px;
+            background:
+                radial-gradient(
+                    rgba(255,255,255,0.03),
+                    transparent 70%
+                );
+            filter:blur(40px);
+            animation:fog 8s ease-in-out infinite alternate;
+            pointer-events:none;
+}
+
+.world-edit-cube-auto-3 {
+    position:relative;
+            width:340px;
+            height:340px;
+            border:
+                1px solid rgba(255,255,255,0.08);
+            /* 큐브는 회색 */
+            background:
+                linear-gradient(
+                    145deg,
+                    #4a4a4a,
+                    #2a2a2a
+                );
+            box-shadow:
+                0 0 80px rgba(255,255,255,0.05),
+                inset 0 0 30px rgba(255,255,255,0.05);
+            border-radius:18px;
+            transform:
+                rotateX(12deg)
+                rotateY(-18deg);
+            overflow:hidden;
+            margin-left:0;
+}
+
+.world-edit-cube-auto-4 {
+    position:absolute;
+                top:-100%;
+                left:-40%;
+                width:80%;
+                height:300%;
+                background:
+                    linear-gradient(
+                        transparent,
+                        rgba(255,255,255,0.15),
+                        transparent
+                    );
+                transform:
+                    rotate(25deg);
+                animation:
+                    scan 5s linear infinite;
+}
+
+.world-edit-cube-auto-5 {
+    position:absolute;
+                inset:0;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                padding:40px;
+                color:white;
+}
+
+.world-edit-cube-auto-6 {
+    font-size:42px;
+                    font-weight:700;
+                    letter-spacing:6px;
+                    text-shadow:
+                        0 0 20px rgba(255,255,255,0.2);
+}
+
+.world-edit-cube-auto-7 {
+    margin-top:18px;
+                    color:#b0b0b0;
+                    font-size:18px;
+                    letter-spacing:3px;
+}
+
+.world-edit-cube-auto-8 {
+    margin-top:50px;
+                    font-size:13px;
+                    color:#9a9a9a;
+                    line-height:1.8;
+}

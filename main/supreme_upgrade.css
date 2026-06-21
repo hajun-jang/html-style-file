@@ -1,38 +1,6 @@
-/* supreme_upgrade.css - Generated from WORLD-EDITOR.md */
+/* supreme_upgrade.css - Dynamically compiled from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
-.su-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.su-glow {
-    position: absolute;
-    top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
-    animation: su-rotate 20s linear infinite;
-}
-
-.su-title {
-    font-size: 26px;
-    font-weight: 900;
-    color: #fff;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-}
-
-.su-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 500;
-}
-
-.su-icon { color: #ffd700; filter: drop-shadow(0 0 5px #ffd700); }
-
 .supreme-upgrade-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -52,6 +20,15 @@
     box-shadow: 0 30px 70px rgba(0,0,0,0.8), 0 0 30px rgba(255, 215, 0, 0.1);
 }
 
+.su-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.su-text { color: #fff; }
+
 .su-tag {
     font-size: 10px;
     font-weight: 800;
@@ -67,5 +44,28 @@
     margin-bottom: 25px;
 }
 
-.su-text { color: #fff; }
+.su-glow {
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+    animation: su-rotate 20s linear infinite;
+}
+
+.su-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.su-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.su-icon { color: #ffd700; filter: drop-shadow(0 0 5px #ffd700); }
 

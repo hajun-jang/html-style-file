@@ -1,6 +1,64 @@
-/* vision_overlay.css - Generated from WORLD-EDITOR.md */
+/* vision_overlay.css - Dynamically compiled from WORLD-EDITOR.md */
 
 /* --- External Styles --- */
+.v-tag {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(0, 212, 255, 0.8);
+    text-transform: uppercase;
+}
+
+.v-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.v-info {
+    font-size: 8px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+.v-scanline {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: rgba(0, 212, 255, 0.15);
+    animation: v-scan 4s linear infinite;
+    pointer-events: none;
+}
+
+.v-stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.v-main-title {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.normal {
+    color: #00ffaa;
+    text-shadow: 0 0 8px rgba(0, 255, 170, 0.4);
+}
+
+.v-footer {
+    margin-top: 25px;
+}
+
+.v-value {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+}
+
 .vision-overlay-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -23,81 +81,11 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.normal {
-    color: #00ffaa;
-    text-shadow: 0 0 8px rgba(0, 255, 170, 0.4);
-}
-
-.v-value {
-    font-family: 'Fira Code', monospace;
-    font-weight: 700;
-}
-
-.v-bar {
-    width: 100%;
-    height: 1px;
-    background: rgba(0, 212, 255, 0.2);
-    margin-bottom: 10px;
-}
-
-.v-info {
-    font-size: 8px;
-    text-align: right;
-    color: rgba(255, 255, 255, 0.2);
-    letter-spacing: 1px;
-}
-
-.v-scanline {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 2px;
-    background: rgba(0, 212, 255, 0.15);
-    animation: v-scan 4s linear infinite;
-    pointer-events: none;
-}
-
 .v-header {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
-}
-
-.v-label {
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 500;
-}
-
-.v-main-title {
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-.v-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.v-tag {
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: rgba(0, 212, 255, 0.8);
-    text-transform: uppercase;
-}
-
-.v-footer {
-    margin-top: 25px;
-}
-
-.v-stat-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
 }
 
 .v-pulse-dot {
@@ -107,5 +95,17 @@
     border-radius: 50%;
     box-shadow: 0 0 10px #00d4ff;
     animation: v-dot-pulse 2s infinite;
+}
+
+.v-bar {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 212, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+.v-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
 }
 
