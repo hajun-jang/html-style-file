@@ -10,19 +10,21 @@
         }
 
         try {
-            // Desmos 그래프 계산기 인스턴스 생성 (다크모드 강제 적용)
+            // Desmos 그래프 계산기 인스턴스 생성 (수식 입력창 비활성화 및 색반전 해제)
             const calculator = Desmos.GraphingCalculator(elt, {
-                keypad: true,
-                expressions: true,
+                keypad: false,         // 키패드 숨김
+                expressions: false,    // 좌측 수식 입력창 숨김
                 settingsMenu: true,
                 zoomButtons: true,
-                invertedColors: true, // 다크 테마 역대비 적용
+                invertedColors: false, // 색상 반전 해제
                 border: false
             });
 
-            // 기본 예제 함수 수식 입력 (사인/코사인 파형)
-            calculator.setExpression({ id: 'eq1', latex: 'y=\\sin\\left(x\\right)' });
-            calculator.setExpression({ id: 'eq2', latex: 'y=\\cos\\left(x\\right)' });
+            // 사용자 지정 수식 목록 가져오기 (window.DESMOS_EXPRESSIONS)
+            const expressions = window.DESMOS_EXPRESSIONS || [];
+            expressions.forEach(expr => {
+                calculator.setExpression(expr);
+            });
 
             console.log("Desmos Graphing Calculator successfully initialized in Dark Mode.");
             return true;
